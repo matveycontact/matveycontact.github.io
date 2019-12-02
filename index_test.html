@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	
   <meta charset="UTF-8">
 
   <title>СМИ и Гасан</title>
@@ -85,11 +86,36 @@ body {
     right: 0; 
 }
 
+#parent_popup {
+	background: #000000bf;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+#popup {
+	background-color: #fff;
+    height: 200px;
+    position: fixed;
+    top: 40%;
+    left: 37%;
+    color: #e41eb0;
+    width: 25%;
+}
     </style>
+    <
    
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div id="parent_popup">
+  <div id="popup" style="    text-align: center;    padding-top: 3%;    font-family: arial;">
+    <p style="    font-size: 20px;    color: black;    padding-bottom: 5%;">Соедини заголовки, которые опубликовали разные медиа, с их логотипами. </p>
+    <p style="cursor: pointer;font-weight: bold;" onclick="document.getElementById('parent_popup').style.display='none';">Начать играть</p>
+  </div>
+</div>
   <section class="memory-game">
  <h1 style="
     color: white;
