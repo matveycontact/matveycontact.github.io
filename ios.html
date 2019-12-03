@@ -63,8 +63,11 @@ body {
   position: absolute;
   border-radius: 5px;
   background: #ffffff;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+	-webkit-perspective: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0,0,0);
+    visibility:visible;
+    backface-visibility: hidden;
   font-family: arial;
   font-size: 18px;
 }
@@ -117,7 +120,7 @@ body {
 <body>
 <div id="parent_popup">
   <div id="popup" style="    text-align: center;    padding-top: 3%;    font-family: arial;">
-    <p style="    font-size: 20px;    color: black;    padding-bottom: 5%;">Соедини заголовки, которые опубликовали разные медиа, с их логотипами. </p>
+    <p style="    font-size: 20px;    color: black;    padding-bottom: 5%;">Соедини заголовки, которые опубликовали разные медиа, с их логотипами. Версия 12 </p>
     <p style="cursor: pointer;font-weight: bold;" onclick="document.getElementById('parent_popup').style.display='none';">Начать играть</p>
   </div>
 </div>
