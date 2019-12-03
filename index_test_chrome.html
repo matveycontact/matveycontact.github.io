@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+  <meta charset="UTF-8">
+
+  <title>СМИ и Гасан</title>
+    <style> 
+  * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #005da8;
+}
+
+.memory-game {
+  width: 900px;
+  height: 900px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.memory-card {
+	background: #ffffff;
+  width: calc(25% - 10px);
+ /* height: calc(25% - 10px); */
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .4s;
+  transition-timing-function: ease-in-out;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #ffffff;
+  backface-visibility: hidden;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.front-face {
+  transform: rotateY(179deg);
+}
+
+.part {
+    width: 900px;
+    height: 450px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    perspective: 1000px;
+}
+.img_smi {
+	max-width: 150px;
+	 margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; 
+}
+
+#parent_popup {
+	background: #000000bf;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+#popup {
+	background-color: #fff;
+    height: 200px;
+    position: fixed;
+    top: 40%;
+    left: 37%;
+    color: #e41eb0;
+    width: 25%;
+}
+    </style>
+    <
+   
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="parent_popup">
+  <div id="popup" style="    text-align: center;    padding-top: 3%;    font-family: arial;">
+    <p style="    font-size: 20px;    color: black;    padding-bottom: 5%;">Соедини заголовки, которые опубликовали разные медиа, с их логотипами. </p>
+    <p style="cursor: pointer;font-weight: bold;" onclick="document.getElementById('parent_popup').style.display='none';">Начать играть</p>
+  </div>
+</div>
+  <section class="memory-game">
+ <h1 style="
+    color: white;
+    font-size: 25px;
+    font-family: arial;
+"> Цитаты</h1>
+<!--моя хрень 1  -->
+<div class="part">
+
+    <div class="memory-card" data-framework="meduza">
+       <div class="front-face">Руководство ВШЭ рекомендовало своему профессору извиниться за слова о «клоачном» русском языке. Возможно, из-за Путина</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени 1 -->
+
+<!--моя хрень 2  -->
+    <div class="memory-card" data-framework="lenta">
+       <div class="front-face">Профессор из ВШЭ назвал свой пост об убогом русском языке вершиной карьеры</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени 2 -->
+
+<!--моя хрень 3  -->
+    <div class="memory-card" data-framework="tsar">
+       <div class="front-face">"Какие извинения? Чемодан - вокзал": Семеро в ВШЭ постарались заставить Гусейнова извиниться.</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+    
+<!--моя хрень 4  -->
+    <div class="memory-card" data-framework="BBC">
+       <div class="front-face">ВШЭ отчитала профессора за слова о "клоачном" русском языке. </div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+
+<!--моя хрень 5  -->
+    <div class="memory-card" data-framework="af">
+       <div class="front-face">«Клоака заговорила». Кому Россия доверяет воспитание нового поколения?</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+
+<!--моя хрень 6  -->
+    <div class="memory-card" data-framework="sputnik">
+       <div class="front-face">Как Высшая школа экономики стала клоакой. </div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+
+<!--моя хрень 7  -->
+    <div class="memory-card" data-framework="agpn_sz">
+       <div class="front-face"> Клоачные животные из ВШЭ опять нагадили на Россию</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+
+<!--моя хрень 8  -->
+    <div class="memory-card" data-framework="pravda">
+       <div class="front-face"> "Не клоачный, а фашистский": еще один профессор ВШЭ о русском языке</div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+    
+<!--конец моей хрени  -->
+</div > 
+<h1 style="
+    color: white;
+    font-size: 25px;
+    font-family: arial;
+"> СМИ</h1>
+<div class="part">
+<div class="memory-card" data-framework="meduza">
+      <div class="front-face" class="quat"/> <img class="img_smi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Meduza_logo.svg/1280px-Meduza_logo.svg.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="lenta">
+      <div class="front-face"/> <img class="img_smi" src="https://ic.pics.livejournal.com/zyalt/10761149/396949/396949_300.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="tsar">
+      <div class="front-face"/> <img class="img_smi" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Tsargrad_logo.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="BBC">
+      <div class="front-face"/> <img class="img_smi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/BBC_Russia_%28v%29.svg/1200px-BBC_Russia_%28v%29.svg.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="af">
+      <div class="front-face"/> <img class="img_smi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Aif_logo.svg/1280px-Aif_logo.svg.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="sputnik">
+      <div class="front-face"/> <img class="img_smi" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Sputnik_logo.svg/1200px-Sputnik_logo.svg.png"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="agpn_sz">
+      <div class="front-face"/> <img class="img_smi" src="http://www.apn-spb.ru/images/logo.gif"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+<div class="memory-card" data-framework="pravda">
+      <div class="front-face"/> <img class="img_smi" src="https://cdn1.img.ukraina.ru/images/100979/68/1009796821.gif"/></div>
+       <img class="back-face" src="/gas.jpg"/>
+    </div>
+</div>
+  </section>
+
+ <script>
+const cards = document.querySelectorAll('.memory-card');
+
+let hasFlippedCard = false;
+let lockBoard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+  if (lockBoard) return;
+  if (this === firstCard) return;
+
+  this.classList.add('flip');
+
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+
+    return;
+  }
+
+  secondCard = this;
+  checkForMatch();
+}
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+  isMatch ? disableCards() : unflipCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', flipCard);
+  secondCard.removeEventListener('click', flipCard);
+
+  resetBoard();
+}
+
+function unflipCards() {
+  lockBoard = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    resetBoard();
+  }, 2000);
+}
+
+function resetBoard() {
+  [hasFlippedCard, lockBoard] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 16);
+    card.style.order = randomPos;
+  });
+})();
+
+
+cards.forEach(card => card.addEventListener('click', flipCard));
+cards.forEach(card_logo => card.addEventListener('click', flipCard));
+
+</script>
+</body>
+</html>
